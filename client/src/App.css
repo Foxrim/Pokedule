@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-frame-screen);
+  font-family: "Monocraft", "Times New Roman", Times, serif;
+}
+
+@font-face {
+  font-family: "Monocraft";
+  src: url(../public/Monocraft.ttc);
+}
+
+:root {
+  --font-color-primary: rgb(226, 226, 226);
+  --font-color-secondary: #193c1e;
+
+  --font-color-tertiary: #193c1e7a;
+
+  --color-extern-primary: #9e0922;
+  --color-extern-secondary: #c30827;
+  --color-extern-tertiary: #dc0a2d;
+  --color-extern-quaternary: #e9677d;
+
+  --color-intern-primary: #c30827;
+  --color-intern-secondary: #dc0a2d;
+
+  --color-frame-image: #dedede;
+  --color-frame-screen: #313131;
+
+  --color-border: #000000;
+
+  --color-button-primary: #001c18;
+  --color-button-secondary: #00312b;
+  --color-button-tertiary: #005e52;
+
+  --color-arrow: #a1a1a1;
+
+  --color-frame-text-1: #51ae5f;
+  --color-frame-text-2: #4dcc60;
+
+  --color-areatext: #313131;
+
+  --color-type-primary: #28abfd9a;
+  --color-type-secondary: #008be1;
+  --color-type-tertiary: #145f8e;
+
+  --color-menu-primary: #196a9e;
+  --color-menu-secondary: #28aafd;
+  --color-menu-tertiary: #e7e7e7;
+  --color-menu-quaternary: #dddddd;
+
+  --color-sButton-primary: #dedede;
+  --color-sButton-secondary: #c3c3c3;
+  --color-sButton-tertiary: #828282;
+  --color-sButton-quaternary: #9b9b9b;
+
+  --diode-red-primary: #c00808;
+  --diode-red-secondary: #fd1e1e;
+  --diode-red-tertiary: #fff8c7;
+
+  --diode-yellow-primary: #9f8b0f;
+  --diode-yellow-secondary: #dbc00c;
+  --diode-yellow-tertiary: #dfdfdf;
+
+  --diode-green-primary: #0f9f19;
+  --diode-green-secondary: #06c529;
+  --diode-green-tertiary: #f3f3f3;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+    background: radial-gradient(
+      circle,
+      white 0%,
+      white 20%,
+      #9e0922 40%,
+      #9e0922 50%,
+      #9e0922 60%,
+      #9e0922 70%,
+      #9e0922 80%,
+      #9e0922 90%,
+      #9e0922 100%
+    );
+  }
+  100% {
+    opacity: 1;
+    transform: scale(10);
+    background: radial-gradient(
+      circle,
+      white 0%,
+      white 20%,
+      #9e0922 40%,
+      #9e0922 50%,
+      #9e0922 60%,
+      #9e0922 70%,
+      #9e0922 80%,
+      #9e0922 90%,
+      #9e0922 100%
+    );
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    transform: scale(10);
+    background: radial-gradient(
+      circle,
+      white 0%,
+      white 20%,
+      #9e092200 40%,
+      #9e092200 50%,
+      #9e092200 60%,
+      #9e092200 70%,
+      #9e092200 80%,
+      #9e092200 90%,
+      #9e092200 100%
+    );
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+    background: radial-gradient(
+      circle,
+      white 0%,
+      white 20%,
+      #9e092200 40%,
+      #9e092200 50%,
+      #9e092200 60%,
+      #9e092200 70%,
+      #9e092200 80%,
+      #9e092200 90%,
+      #9e092200 100%
+    );
+  }
+}
+
+.fade-out {
+  position: fixed;
+  top: 2%;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 50%;
+  animation: fadeOut 2.5s forwards;
+  z-index: 3;
+}
+
+.fade-in {
+  position: fixed;
+  top: 2%;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 50%;
+  animation: fadeIn 1.5s forwards;
+  z-index: 3;
+}
+
+.fade-in-content {
+  opacity: 0;
+  animation: fadeInContent 2s forwards;
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

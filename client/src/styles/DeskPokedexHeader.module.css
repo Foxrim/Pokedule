@@ -1,0 +1,350 @@
+.pokedexHeader {
+  height: 6rem;
+  width: 100vw;
+  background-color: var(--color-extern-primary);
+  border: solid 2px var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+
+  position: relative;
+  z-index: 5;
+
+  overflow: hidden;
+
+  .menuDiodeContainer {
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    border: solid 4px var(--color-menu-quaternary);
+    background-color: var(--color-menu-secondary);
+    z-index: 5;
+
+    overflow: hidden;
+    animation: menu 4s ease-in-out infinite;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .menuDiodeReflect {
+      height: 92%;
+      width: 92%;
+      border-radius: 50%;
+      background-color: var(--color-menu-primary);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      span {
+        height: 60%;
+        width: 60%;
+        background-color: var(--color-menu-secondary);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.5rem 0 0 0.5rem;
+
+        hr {
+          border: none;
+          height: 8px;
+          width: 8px;
+          background-color: var(--color-menu-quaternary);
+          border-radius: 50%;
+          animation: diode 4s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  .diodeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    gap: 0.85rem;
+    z-index: 5;
+
+    position: absolute;
+    top: 0.75rem;
+    left: 8.1rem;
+  }
+
+  .reflect1 {
+    height: 8rem;
+    width: 1rem;
+    background-color: var(--color-extern-secondary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    left: 8rem;
+  }
+
+  .reflect2 {
+    height: 8rem;
+    width: 1.75rem;
+    background-color: var(--color-extern-tertiary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    left: 9rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .pokedexBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-border);
+    border-radius: 12px 12px 0 0;
+    height: 15.45vh;
+    clip-path: polygon(0 0, 100% 0, 100% 58%, 65.5% 58%, 45.5% 100%, 0 100%);
+
+    .pokedexHeader {
+      width: 99%;
+      height: 99%;
+      border: none;
+      border-radius: 10px 10px 0 0;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 56%,
+        65.5% 56%,
+        45.25% 98.5%,
+        0 98.5%
+      );
+
+      .menuDiodeContainer {
+        height: 5.5rem;
+        width: 5.5rem;
+        margin: 0 0 0 0.75rem;
+        border: solid 5px var(--color-menu-quaternary);
+        transition: transform 1s ease-in-out;
+        cursor: pointer;
+        .menuDiodeReflect {
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+
+      .menuDiodeContainer:hover {
+        transform: rotate(-90deg);
+        .menuDiodeReflect {
+          transform: rotate(-135deg);
+        }
+      }
+
+      .diodeContainer {
+        gap: 1.2rem;
+        z-index: 5;
+
+        top: 1.2rem;
+        left: 11.5rem;
+
+        .diodeRed {
+          border: solid 2px var(--color-border);
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background-color: var(--diode-red-primary);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          hr {
+            border: solid 3px var(--diode-red-secondary);
+            border-radius: 50%;
+            animation: diodeRed 15s infinite;
+          }
+        }
+
+        .diodeYellow {
+          border: solid 2px var(--color-border);
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background-color: var(--diode-yellow-primary);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          hr {
+            border: solid 3px var(--diode-yellow-secondary);
+            border-radius: 50%;
+            animation: diodeYellow 10s infinite;
+          }
+        }
+
+        .diodeGreen {
+          border: solid 2px var(--color-border);
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background-color: var(--diode-green-primary);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          hr {
+            border: solid 3px var(--diode-green-secondary);
+            border-radius: 50%;
+            animation: diodeGreen 20s infinite;
+          }
+        }
+      }
+
+      h1 {
+        display: none;
+      }
+
+      .reflect1 {
+        height: 12rem;
+        width: 2rem;
+        background-color: var(--color-extern-secondary);
+        rotate: 25deg;
+
+        border: none;
+
+        position: absolute;
+        left: 11.25rem;
+      }
+
+      .reflect2 {
+        height: 12rem;
+        width: 2.5rem;
+
+        left: 12.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .pokedexHeader {
+    display: none;
+  }
+}
+
+@keyframes menu {
+  50% {
+    box-shadow: 0px 0px 40px 10px #e7e7e783, 0px 0px 60px 15px #008be183;
+  }
+}
+
+@keyframes diode {
+  50% {
+    background-color: rgb(126, 200, 223);
+  }
+}
+
+@keyframes diodeRed {
+  19% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  20% {
+    border: solid 3px var(--diode-red-tertiary);
+  }
+  21% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  25% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  26% {
+    border: solid 3px var(--diode-red-tertiary);
+  }
+  27% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  79% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  80% {
+    border: solid 3px var(--diode-red-tertiary);
+  }
+  81% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+  100% {
+    border: solid 3px var(--diode-red-secondary);
+  }
+}
+
+@keyframes diodeYellow {
+  19% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  20% {
+    border: solid 3px var(--diode-yellow-tertiary);
+  }
+  21% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  25% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  26% {
+    border: solid 3px var(--diode-yellow-tertiary);
+  }
+  27% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  79% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  80% {
+    border: solid 3px var(--diode-yellow-tertiary);
+  }
+  81% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+  100% {
+    border: solid 3px var(--diode-yellow-secondary);
+  }
+}
+
+@keyframes diodeGreen {
+  19% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  20% {
+    border: solid 3px var(--diode-green-tertiary);
+  }
+  21% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  25% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  26% {
+    border: solid 3px var(--diode-green-tertiary);
+  }
+  27% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  79% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  80% {
+    border: solid 3px var(--diode-green-tertiary);
+  }
+  81% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+  100% {
+    border: solid 3px var(--diode-green-secondary);
+  }
+}

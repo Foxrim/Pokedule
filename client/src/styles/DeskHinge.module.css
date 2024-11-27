@@ -1,0 +1,71 @@
+.deskHinge {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 13px 0 0;
+  border: solid 2px var(--color-border);
+  background-color: var(--color-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  .deskHingeRed1 {
+    height: 15%;
+    width: 100%;
+    background-color: var(--color-extern-primary);
+
+    .deskHingeClear1 {
+      height: 100%;
+      width: 1.65rem;
+      background-color: var(--color-extern-secondary);
+
+      .deskHingeWhite {
+        height: 100%;
+        width: 0.5rem;
+        background-color: var(--color-extern-quaternary);
+        margin: 0 0 0 0.3rem;
+        border: none;
+      }
+    }
+  }
+
+  .deskHingeRed2 {
+    height: 80%;
+    width: 100%;
+    background-color: var(--color-extern-primary);
+
+    .deskHingeClear2 {
+      height: 100%;
+      width: 1.65rem;
+      background-color: var(--color-extern-secondary);
+
+      .deskHingeWhite {
+        height: 100%;
+        width: 0.5rem;
+        background-color: var(--color-extern-quaternary);
+        margin: 0 0 0 0.3rem;
+        border: none;
+      }
+    }
+  }
+
+  .deskHingeRed3 {
+    height: 2.5%;
+    width: 100%;
+    background-color: var(--color-extern-primary);
+
+    .deskHingeClear3 {
+      height: 100%;
+      width: 1.65rem;
+      background-color: var(--color-extern-secondary);
+
+      .deskHingeWhite {
+        height: 100%;
+        width: 0.5rem;
+        background-color: var(--color-extern-quaternary);
+        margin: 0 0 0 0.3rem;
+        border: none;
+      }
+    }
+  }
+}

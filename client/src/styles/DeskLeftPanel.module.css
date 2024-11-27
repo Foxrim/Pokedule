@@ -1,0 +1,88 @@
+@media screen and (min-width: 980px) {
+  .deskLeftPanel {
+    background-color: var(--color-intern-secondary);
+    height: 100%;
+    width: 50%;
+    border-radius: 12px 12px 0 12px;
+
+    display: grid;
+    grid-template-columns: 93% 7%;
+    grid-template-rows: 15.5% 84.5%;
+
+    overflow: hidden;
+
+    .deskPokedexHeader {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .deskHinge {
+      grid-area: 1 / 2 / 3 / 3;
+    }
+
+    .pokedexInternBorder {
+      grid-area: 1 / 1 / 3 / 2;
+      background-color: var(--color-border);
+      height: 97.4%;
+      width: 97.15%;
+      margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+      border-radius: 0 0 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      clip-path: polygon(
+        0 19.5%,
+        49% 19.5%,
+        71% 11%,
+        100% 11%,
+        100% 100%,
+        0 100%
+      );
+
+      .pokedexIntern {
+        height: 99%;
+        width: 99%;
+        background-color: var(--color-intern-primary);
+        border-radius: 0 0 0 8px;
+        overflow: hidden;
+        clip-path: polygon(
+          0 19.6%,
+          49.25% 19.6%,
+          71.5% 11.05%,
+          99.90% 11.05%,
+          99.9% 100%,
+          0 100%
+        );
+
+        .reflectIntern1 {
+          position: absolute;
+          height: 46rem;
+          width: 2.5rem;
+          border: none;
+          rotate: 25deg;
+          background-color: var(--color-intern-secondary);
+          left: 36rem;
+          bottom: 3em;
+          margin: 0;
+        }
+
+        .reflectIntern2 {
+          position: absolute;
+          height: 46rem;
+          width: 2.5rem;
+          border: none;
+          rotate: 25deg;
+          background-color: var(--color-intern-secondary);
+          left: 55rem;
+          bottom: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .deskLeftPanel {
+    display: none;
+  }
+}

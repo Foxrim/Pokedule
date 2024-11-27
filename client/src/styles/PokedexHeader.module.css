@@ -1,0 +1,181 @@
+.pokedexHeader {
+  height: 6rem;
+  width: 100vw;
+  background-color: var(--color-extern-primary);
+  border: solid 2px var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+
+  position: relative;
+  z-index: 5;
+
+  overflow: hidden;
+
+  .menuDiodeContainer {
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    border: solid 4px var(--color-menu-quaternary);
+    background-color: var(--color-menu-secondary);
+    z-index: 5;
+    cursor: pointer;
+
+    overflow: hidden;
+    animation: menu 4s ease-in-out infinite;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .menuDiodeReflect {
+      height: 92%;
+      width: 92%;
+      border-radius: 50%;
+      background-color: var(--color-menu-primary);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      span {
+        height: 60%;
+        width: 60%;
+        background-color: var(--color-menu-secondary);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.5rem 0 0 0.5rem;
+
+        hr {
+          border: none;
+          height: 8px;
+          width: 8px;
+          background-color: var(--color-menu-quaternary);
+          border-radius: 50%;
+          animation: diode 4s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  img {
+    margin-top: 1.5rem;
+    height: 70px;
+    z-index: 5;
+  }
+
+  .diodeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    gap: 0.85rem;
+    z-index: 5;
+
+    position: absolute;
+    top: 0.75rem;
+    left: 8.1rem;
+
+    .diodeRed {
+      border: solid 1px var(--color-border);
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      background-color: var(--diode-red-primary);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      hr {
+        border: solid 2px var(--diode-red-secondary);
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        background-color: var(--diode-red-tertiary);
+      }
+    }
+
+    .diodeYellow {
+      border: solid 1px var(--color-border);
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      background-color: var(--diode-yellow-primary);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      hr {
+        border: solid 2px var(--diode-yellow-secondary);
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        background-color: var(--diode-red-tertiary);
+      }
+    }
+
+    .diodeGreen {
+      border: solid 1px var(--color-border);
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      background-color: var(--diode-green-primary);
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      hr {
+        border: solid 2px var(--diode-green-secondary);
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+        background-color: var(--diode-red-tertiary);
+      }
+    }
+  }
+
+  .reflect1 {
+    height: 8rem;
+    width: 1rem;
+    background-color: var(--color-extern-secondary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    left: 8rem;
+  }
+
+  .reflect2 {
+    height: 8rem;
+    width: 1.75rem;
+    background-color: var(--color-extern-tertiary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    left: 9rem;
+  }
+}
+
+@keyframes menu {
+  50% {
+    box-shadow: 0px 0px 40px 10px #e7e7e783, 0px 0px 60px 15px #008be183;
+  }
+}
+
+@keyframes diode {
+  50% {
+    background-color: rgb(126, 200, 223);
+  }
+}

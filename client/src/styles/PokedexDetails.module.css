@@ -1,0 +1,134 @@
+.pokedexDetails {
+  position: relative;
+  z-index: 5;
+  margin: 3rem 0 2rem 0;
+  height: 32vh;
+  display: grid;
+  grid-template-columns: 10% 15% 50% 15% 10%;
+  grid-template-rows: 70% 10% 20%;
+
+  .billboard {
+    grid-area: 1 / 2 / 2 / 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--color-areatext);
+    border: solid 3px var(--color-border);
+    color: var(--font-color-primary);
+    font-size: 19px;
+    padding: 1rem;
+    overflow: scroll;
+    cursor: default;
+
+    h3 {
+      margin: 0 0 1rem 0.25rem;
+    }
+
+    p {
+      margin: 0.25rem;
+    }
+  }
+
+  .billboard::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 6px;
+    height: 0px;
+  }
+
+  .billboard::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .billboard::-webkit-scrollbar-thumb {
+    background-color: rgb(131, 131, 131);
+    border-radius: 20px;
+    border: 3px solid rgb(129, 129, 129);
+  }
+
+  div {
+    grid-area: 3 / 3 / 4 / 4;
+    height: 3.8rem;
+    width: 80%;
+    background-color: var(--color-frame-text-2);
+    border: solid 3px var(--color-border);
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .idNumber {
+      margin: 0;
+      padding: 0;
+      height: 95%;
+      width: 98%;
+      background-color: var(--color-frame-text-1);
+      color: var(--font-color-secondary);
+      font-size: 40px;
+      text-align: center;
+      cursor: default;
+    }
+  }
+
+  button {
+    grid-area: 3 / 4 / 3 / 4;
+    border-radius: 50%;
+    height: 3.8rem;
+    width: 3.8rem;
+    border: solid 4px var(--color-sButton-tertiary);
+    background-color: var(--color-sButton-secondary);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+
+    figure {
+      background-color: var(--color-sButton-primary);
+      height: 3rem;
+      width: 3rem;
+      margin: 0 0 0 -0.3rem;
+      border-radius: 50%;
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  button:active {
+    background-color: var(--color-sButton-primary);
+    figure {
+      background-color: var(--color-sButton-secondary);
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.billboard.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.billboard.error p {
+  animation: blink 1s infinite;
+  margin: 0;
+}

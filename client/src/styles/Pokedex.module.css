@@ -1,0 +1,93 @@
+.pokedex {
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-intern-primary);
+  overflow: hidden;
+  position: relative;
+
+  .reflect1 {
+    height: 60rem;
+    width: 2.5rem;
+    background-color: var(--color-extern-tertiary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    right: 18rem;
+    top: 0;
+    z-index: 3;
+  }
+
+  .reflect2 {
+    height: 50rem;
+    width: 2.5rem;
+    background-color: var(--color-extern-tertiary);
+    rotate: 25deg;
+
+    border: none;
+
+    position: absolute;
+    right: 2rem;
+    bottom: -8rem;
+    z-index: 3;
+  }
+
+  .borderIternTop {
+    width: 100vw;
+    height: 0.5rem;
+    background-color: var(--color-intern-secondary);
+    z-index: 10;
+    position: relative;
+
+    hr {
+      position: absolute;
+      border: none;
+      width: 100vw;
+      background-color: var(--color-border);
+      height: 2px;
+    }
+  }
+
+  .borderIternBottom {
+    width: 100vw;
+    height: 0.8rem;
+    background-color: var(--color-intern-secondary);
+    z-index: 10;
+    position: relative;
+    bottom: 0rem;
+
+    .hrTop {
+      position: absolute;
+      border: none;
+      width: 100vw;
+      bottom: 0.3rem;
+      background-color: var(--color-border);
+      height: 2px;
+    }
+
+    .hrBottom {
+      position: absolute;
+      border: none;
+      width: 100vw;
+      bottom: 0;
+      margin-bottom: 0rem;
+      background-color: var(--color-border);
+      height: 4px;
+      z-index: 6;
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    height: 80%;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .pokedex {
+    display: none;
+  }
+}

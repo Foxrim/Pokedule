@@ -1,0 +1,200 @@
+.deskSound {
+  width: 100%;
+  height: 22%;
+  margin-top: 1rem;
+
+  .blackBars {
+    width: 100%;
+    height: 6px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    hr {
+      width: 3.25rem;
+      height: 6px;
+      border: none;
+      background-color: var(--color-border);
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .soundButtonsContainer {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 1rem;
+
+    .soundButtons {
+      width: 12rem;
+      height: 3.5rem;
+      background-color: var(--color-sButton-tertiary);
+
+      display: grid;
+      grid-template-columns: 30% 30% 10% 30%;
+      gap: 0.25rem;
+      padding: 0.25rem 1rem 0.25rem 0.25rem;
+
+      .buttonShadowOn {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-sButton-secondary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        cursor: pointer;
+
+        span {
+          width: 92%;
+          height: 92%;
+          background-color: var(--color-sButton-primary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8% 0 0 8%;
+          font-size: 35px;
+        }
+      }
+
+      .buttonShadowOn:hover span {
+        font-size: 37px;
+      }
+
+      .buttonShadowOn:active span {
+        width: 99%;
+        height: 99%;
+      }
+
+      .buttonShadowOff {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-sButton-secondary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        cursor: pointer;
+
+        span {
+          width: 92%;
+          height: 92%;
+          background-color: var(--color-sButton-primary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8% 0 0 8%;
+          font-size: 35px;
+        }
+      }
+
+      .buttonShadowOff:hover span {
+        font-size: 37px;
+      }
+
+      .buttonShadowOff:active span {
+        width: 99%;
+        height: 99%;
+      }
+
+      .musicOff {
+        background-color: var(--color-sButton-quaternary);
+        span {
+          background-color: var(--color-sButton-secondary);
+        }
+      }
+
+      .buttonShadowBark {
+        grid-column: 4 / 5;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-sButton-quaternary);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        cursor: pointer;
+
+        span {
+          width: 92%;
+          height: 92%;
+          background-color: var(--color-sButton-secondary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8% 0 0 8%;
+
+          img {
+            height: 92%;
+            width: 92%;
+          }
+        }
+      }
+
+      .errorP {
+        display: none;
+      }
+
+      .buttonShadowBark:hover span img {
+        scale: 1.1;
+      }
+
+      .buttonShadowBark:active span {
+        background-color: var(--color-sButton-primary);
+        width: 99%;
+        height: 99%;
+      }
+    }
+
+    .diodeYellow {
+      height: 50px;
+      width: 50px;
+      background-color: var(--diode-yellow-secondary);
+      border: solid 3px var(--color-border);
+      border-radius: 50%;
+      margin-top: 2rem;
+
+      overflow: hidden;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .diodeYellowReflect1 {
+        height: 92%;
+        width: 92%;
+        background-color: var(--diode-yellow-primary);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .diodeYellowReflect2 {
+          height: 60%;
+          width: 60%;
+          background-color: var(--diode-yellow-secondary);
+          border-radius: 50%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          padding: 10% 0 0 10%;
+
+          hr {
+            height: 5px;
+            width: 5px;
+            border: none;
+            border-radius: 50%;
+            background-color: var(--diode-yellow-tertiary);
+          }
+        }
+      }
+    }
+  }
+}

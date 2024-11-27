@@ -1,0 +1,49 @@
+@media screen and (min-width: 980px) {
+  .deskPokedex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+    width: 100vw;
+
+    .backgroundImageContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      overflow: hidden;
+    }
+
+    .backgroundImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-fit: cover;
+      filter: blur(5px);
+    }
+    .pokedexContainer {
+      height: 95%;
+      width: 70rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .deskPokedex {
+    display: none;
+  }
+  .pokedexContainer {
+    display: none;
+  }
+  .backgroundImage {
+    display: none;
+  }
+  .backgroundImageContainer {
+    display: none;
+  }
+}

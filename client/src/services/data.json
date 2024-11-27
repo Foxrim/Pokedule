@@ -1,0 +1,112 @@
+{
+  "type": [
+    {
+      "id": 0,
+      "name": "normal",
+      "vanilla": "/normal.webp",
+      "black_white": "/normal_black_white.webp"
+    },
+    {
+      "id": 1,
+      "name": "plante",
+      "vanilla": "/plante.webp",
+      "black_white": "/plante_black_white.webp"
+    },
+    {
+      "id": 2,
+      "name": "feu",
+      "vanilla": "/feu.webp",
+      "black_white": "/feu_black_white.webp"
+    },
+    {
+      "id": 3,
+      "name": "eau",
+      "vanilla": "/eau.webp",
+      "black_white": "/eau_black_white.webp"
+    },
+    {
+      "id": 4,
+      "name": "électrik",
+      "vanilla": "/electrik.webp",
+      "black_white": "/electrik_black_white.webp"
+    },
+    {
+      "id": 5,
+      "name": "glace",
+      "vanilla": "/glace.webp",
+      "black_white": "/glace_black_white.webp"
+    },
+    {
+      "id": 6,
+      "name": "combat",
+      "vanilla": "/combat.webp",
+      "black_white": "/combat_black_white.webp"
+    },
+    {
+      "id": 7,
+      "name": "poison",
+      "vanilla": "/poison.webp",
+      "black_white": "/poison_black_white.webp"
+    },
+    {
+      "id": 8,
+      "name": "sol",
+      "vanilla": "/sol.webp",
+      "black_white": "/sol_black_white.webp"
+    },
+    {
+      "id": 9,
+      "name": "vol",
+      "vanilla": "/vol.webp",
+      "black_white": "/vol_black_white.webp"
+    },
+    {
+      "id": 10,
+      "name": "psy",
+      "vanilla": "/psy.webp",
+      "black_white": "/psy_black_white.webp"
+    },
+    {
+      "id": 11,
+      "name": "insecte",
+      "vanilla": "/insecte.webp",
+      "black_white": "/insecte_black_white.webp"
+    },
+    {
+      "id": 12,
+      "name": "roche",
+      "vanilla": "/roche.webp",
+      "black_white": "/roche_black_white.webp"
+    },
+    {
+      "id": 13,
+      "name": "spectre",
+      "vanilla": "/spectre.webp",
+      "black_white": "/spectre_black_white.webp"
+    },
+    {
+      "id": 14,
+      "name": "ténèbres",
+      "vanilla": "/tenebres.webp",
+      "black_white": "/tenebres_black_white.webp"
+    },
+    {
+      "id": 15,
+      "name": "acier",
+      "vanilla": "/acier.webp",
+      "black_white": "/acier_black_white.webp"
+    },
+    {
+      "id": 16,
+      "name": "fée",
+      "vanilla": "/fee.webp",
+      "black_white": "/fee_black_white.webp"
+    },
+    {
+      "id": 17,
+      "name": "dragon",
+      "vanilla": "/dragon.webp",
+      "black_white": "/dragon_black_white.webp"
+    }
+  ]
+}

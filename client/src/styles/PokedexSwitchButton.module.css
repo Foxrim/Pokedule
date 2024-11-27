@@ -1,0 +1,65 @@
+.leftButton {
+  position: absolute;
+  transform: translate(0, -50%);
+  z-index: 20;
+  height: 45vh;
+  width: 10%;
+  background-color: var(--color-button-tertiary);
+  border-radius: 0 10px 10px 0;
+  border: solid 2px var(--color-button-secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    rotate: 180deg;
+    font-size: 100px;
+    margin: 0;
+    color: var(--color-arrow);
+  }
+}
+
+.rightButton {
+  position: absolute;
+  transform: translate(0, -50%);
+  right: 0;
+  z-index: 20;
+  height: 45vh;
+  width: 10%;
+  background-color: var(--color-button-tertiary);
+  border-radius: 10px 0 0 10px;
+  border: solid 2px var(--color-button-secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  overflow: hidden;
+
+  span {
+    font-size: 100px;
+    margin: 0;
+    color: var(--color-arrow);
+  }
+}
+
+.rightButton:active {
+  background-color: var(--color-button-secondary);
+  border: solid 2px var(--color-button-tertiary);
+
+  span {
+    color: var(--color-sButton-secondary);
+  }
+}
+
+.leftButton:active {
+  background-color: var(--color-button-secondary);
+  border: solid 2px var(--color-button-tertiary);
+
+  span {
+    color: var(--color-sButton-secondary);
+  }
+}

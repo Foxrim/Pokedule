@@ -1,0 +1,41 @@
+.deskType {
+  width: 100%;
+  height: 22%;
+  background-color: var(--color-type-tertiary);
+
+  display: grid;
+  grid-template-columns: 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1%;
+  grid-template-rows: 50% 50%;
+  gap: 0.25rem;
+
+  padding: 0.25rem 2.25rem 0.5rem 0.25rem;
+
+  .displayType {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-type-secondary);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    span {
+      height: 92%;
+      width: 92%;
+      background-color: var(--color-type-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8% 0 0 8%;
+
+      img {
+        height: 90%;
+        width: 90%;
+      }
+
+      .vanilla {
+        box-shadow: rgb(255, 255, 255) 0px 0px 15px;
+      }
+    }
+  }
+}
