@@ -103,44 +103,43 @@ const PokedexDetails: React.FC<PokedexDetailsProps> = ({
           </audio>
         )}
         <div className={styles.billboard}>
-          <h3>{displayDescription.name?.fr}</h3>
-          <p>Pokémon de type :</p>
-          {displayDescription.types.length > 0 ? (
-            displayDescription.types.map((type) => (
-              <p key={type.name}> - {type.name}</p>
-            ))
+          {error ? (
+            <div className={styles.deskBillboardError}>
+              <p>( \__/ )</p>
+              <p>( 0°_°0)</p>
+              <p>( " )_(")</p>
+            </div>
+          ) : !description ? (
+            <p>Chargement...</p>
           ) : (
-            <p> Aucun type</p>
+            <>
+              <h3>{description.name?.fr}</h3>
+              <p>Pokémon de type :</p>
+              <p> - {description.types[0]?.name}</p>
+              {description.types[1]?.name && (
+                <p> - {description.types[1].name}</p>
+              )}
+              <p>Il fait partie de la catégorie des {description.category}</p>
+              <p>Il peut possèder des capacités tel que :</p>
+              <p> - {description.talents[0]?.name}</p>
+              {description.talents[1]?.name && (
+                <p> - {description.talents[1].name}</p>
+              )}
+              {description.talents[2]?.name && (
+                <p> - {description.talents[2].name}</p>
+              )}
+              {description.evolution?.pre?.[0]?.name && (
+                <p>Sa pré-évolution est {description.evolution.pre[0].name}</p>
+              )}
+              {description.evolution?.next?.[0]?.name && (
+                <p>Il évolue en {description.evolution.next[0].name}</p>
+              )}
+              <p>Sa taille moyenne est de :</p>
+              <p> - {description.height}</p>
+              <p>Son poids moyen est lui de :</p>
+              <p> - {description.weight}</p>
+            </>
           )}
-          <p>
-            Il fait partie de la catégorie des {displayDescription.category}
-          </p>
-          <p>Il peut possèder des capacités tel que :</p>
-          {displayDescription.talents.length > 0 ? (
-            displayDescription.talents.map((talent) => (
-              <p key={talent.name}> - {talent.name}</p>
-            ))
-          ) : (
-            <p> Aucun talent</p>
-          )}
-          {displayDescription.evolution.pre &&
-          displayDescription.evolution.pre.length > 0 ? (
-            <p>
-              Sa pré-évolution est {displayDescription.evolution.pre[0].name}
-            </p>
-          ) : (
-            <p>Pas de pré-évolution</p>
-          )}
-          {displayDescription.evolution.next &&
-          displayDescription.evolution.next.length > 0 ? (
-            <p>Il évolue en {displayDescription.evolution.next[0].name}</p>
-          ) : (
-            <p>Pas d'évolution</p>
-          )}
-          <p>Sa taille moyenne est de :</p>
-          <p> {displayDescription.height}</p>
-          <p>Son poids moyen est lui de :</p>
-          <p> {displayDescription.weight}</p>
         </div>
         <div>
           <h3 className={styles.idNumber}>
