@@ -47,6 +47,7 @@ const DeskSound: React.FC<DeskSoundProps> = ({
 
   const handlePlaySound = () => {
     if (audioRef.current) {
+      audioRef.current.volume = 0.14;
       audioRef.current.play();
     }
   };
