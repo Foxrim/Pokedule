@@ -20,23 +20,21 @@ export default function PokedexSwitchButtons({
 
   return (
     <>
-      <button type="button" className={styles.leftButton}>
-        <span
-          onClick={onDecrement}
-          className="material-symbols-outlined"
-          onKeyDown={(event) => handleKeyDown(event, onDecrement)}
-        >
-          arrow_right
-        </span>
+      <button
+        type="button"
+        className={styles.leftButton}
+        onClick={onDecrement}
+        onKeyDown={(event) => handleKeyDown(event, onDecrement)}
+      >
+        <span className="material-symbols-outlined">arrow_right</span>
       </button>
-      <button type="button" className={styles.rightButton}>
-        <span
-          onClick={onIncrement}
-          className="material-symbols-outlined"
-          onKeyDown={(event) => handleKeyDown(event, onIncrement)}
-        >
-          arrow_right
-        </span>
+      <button
+        type="button"
+        className={styles.rightButton}
+        onClick={onIncrement}
+        onKeyDown={(event) => handleKeyDown(event, onIncrement)}
+      >
+        <span className="material-symbols-outlined">arrow_right</span>
       </button>
     </>
   );
