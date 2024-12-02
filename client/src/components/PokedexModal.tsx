@@ -19,13 +19,10 @@ export default function PokedexModal() {
               <div className={styles.screen}>
                 <h2> - Mentions légales - </h2>
                 <h3> - Site réalisé par - </h3>
-                <p>
-                  - Maxence CHOISELLE & Foxrim/Flavien ROUSSEAU & Sabrina MEJRI
-                  -
-                </p>
+                <p>- Maxence CHOISELLE & Foxrim/Flavien ROUSSEAU -</p>
                 <h3> - API's - </h3>
                 <p> - Tyradex : Créé par Yarkis & Ashzuu - </p>
-                <p> - Poké : Paul Hallett - </p>
+                <p> - PokéApi : Paul Hallett - </p>
                 <h3> - Police d'écriture - </h3>
                 <p> - Monocraft : Créé par IdreesInc - </p>
                 <h3> - Images - </h3>
