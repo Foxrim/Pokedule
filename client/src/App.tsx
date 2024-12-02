@@ -2,6 +2,7 @@ import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import Homepage from "./components/Homepage";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import DeskPokedex from "./components/DeskPokedex";
 
 import Pokedex from "./components/Pokedex";
@@ -51,6 +52,7 @@ const App: React.FC = () => {
         </audio>
         {showHomepage ? (
           <>
+            <Analytics />
             <Homepage onPokeballClick={handlePokeballClick} />
             {showFadeOut && <div className="fade-out" />}
           </>
